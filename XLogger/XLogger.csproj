@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4C0E44DE-2698-4C87-83FC-CDB9BE0ED597}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>XLogger</RootNamespace>
+    <AssemblyName>XLogger</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Components\FileWrapper\LogFileCloseReasonEnum.cs" />
+    <Compile Include="Components\FileWrapper\LogFileOpenModeEnum.cs" />
+    <Compile Include="Components\FileWrapper\Text\TextLogFileWrapper.cs" />
+    <Compile Include="Components\FileWrapper\Text\TextLogFileWrapperFactory.cs" />
+    <Compile Include="Components\FileWrapper\Zip\ZipLogFileWrapper.cs" />
+    <Compile Include="Components\FileWrapper\Zip\ZipLogFileWrapperFactory.cs" />
+    <Compile Include="Components\OpenReasoning\DefaultOpenReasoning.cs" />
+    <Compile Include="Components\OpenReasoning\IOpenReasoning.cs" />
+    <Compile Include="Components\Zip\BitUtils.cs" />
+    <Compile Include="Components\Zip\ChecksumCalculator.cs" />
+    <Compile Include="Components\Zip\CompressedStreamReader.cs" />
+    <Compile Include="Components\Zip\CompressedStreamWriter.cs" />
+    <Compile Include="Components\Zip\CompressionLevel.cs" />
+    <Compile Include="Components\Zip\DecompressorHuffmanTree.cs" />
+    <Compile Include="Components\Zip\CompressorHuffmanTree.cs" />
+    <Compile Include="Components\Zip\ZIP\BeginsWithNamePreprocessor.cs" />
+    <Compile Include="Components\Zip\ZIP\CompressionMethod.cs" />
+    <Compile Include="Components\Zip\ZIP\Constants.cs" />
+    <Compile Include="Components\Zip\ZIP\GeneralPurposeBitFlags.cs" />
+    <Compile Include="Components\Zip\ZIP\IFileNamePreprocessor.cs" />
+    <Compile Include="Components\Zip\ZIP\ZipArchive.cs" />
+    <Compile Include="Components\Zip\ZIP\ZipArchiveItem.cs" />
+    <Compile Include="Components\Zip\ZIP\ZipCrc32.cs" />
+    <Compile Include="Components\Zip\ZIP\ZipException.cs" />
+    <Compile Include="Components\FileProvider\IFileProvider.cs" />
+    <Compile Include="Components\FileWrapper\ILogFileWrapper.cs" />
+    <Compile Include="Components\FileWrapper\ILogFileWrapperFactory.cs" />
+    <Compile Include="Components\FileProvider\DefaultFileProvider.cs" />
+    <Compile Include="Components\FileCycling\IFileCycling.cs" />
+    <Compile Include="Components\Message\C\CLogMessageFactory.cs" />
+    <Compile Include="Components\Message\ILogMessage.cs" />
+    <Compile Include="Components\Message\ILogMessageFactory.cs" />
+    <Compile Include="Components\Message\Service\ServiceLogMessage.cs" />
+    <Compile Include="Helper\IWriteable.cs" />
+    <Compile Include="Helper\StackHelper.cs" />
+    <Compile Include="Logger\ExceptionSafe\ExceptionSafeLogger.cs" />
+    <Compile Include="Logger\ExternalAction\ExternalActionLogger.cs" />
+    <Compile Include="Logger\File\CommonMessageSettings.cs" />
+    <Compile Include="Logger\Gate\GateLogger.cs" />
+    <Compile Include="Logger\ICommonMessageSettings.cs" />
+    <Compile Include="Logger\File\ILogFilesSettings.cs" />
+    <Compile Include="Helper\AmbientContext.cs" />
+    <Compile Include="Components\Message\C\CLogMessage.cs" />
+    <Compile Include="Logger\File\FileMessageLogger.cs" />
+    <Compile Include="Logger\File\LogFilesSettings.cs" />
+    <Compile Include="Components\FileCycling\DefaultFileCycling.cs" />
+    <Compile Include="Logger\IMessageLogger.cs" />
+    <Compile Include="Helper\LogMessageCategoryEnum.cs" />
+    <Compile Include="Components\Serializer\DefaultMessageSerializer.cs" />
+    <Compile Include="Components\Serializer\IMessageSerializer.cs" />
+    <Compile Include="Logger\ThreadSafe\ThreadSafeLogger.cs" />
+    <Compile Include="Logger\ThreadSafe\MonitorLogger.cs" />
+    <Compile Include="Logger\ThreadSafe\BackgroundThreadLogger.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Helper\StringExtensions.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

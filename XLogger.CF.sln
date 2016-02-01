@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XLogger.CF", "XLogger\XLogger.CF.csproj", "{D46A2120-6F34-48FE-A0DC-D8FC31F0530C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XLogger.Console.CF", "XLogger.Console\XLogger.Console.CF.csproj", "{D58C0A94-3AE1-4395-8588-9BFC2A808F0B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D46A2120-6F34-48FE-A0DC-D8FC31F0530C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D46A2120-6F34-48FE-A0DC-D8FC31F0530C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D46A2120-6F34-48FE-A0DC-D8FC31F0530C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D46A2120-6F34-48FE-A0DC-D8FC31F0530C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D58C0A94-3AE1-4395-8588-9BFC2A808F0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D58C0A94-3AE1-4395-8588-9BFC2A808F0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D58C0A94-3AE1-4395-8588-9BFC2A808F0B}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{D58C0A94-3AE1-4395-8588-9BFC2A808F0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D58C0A94-3AE1-4395-8588-9BFC2A808F0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D58C0A94-3AE1-4395-8588-9BFC2A808F0B}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
