@@ -6,12 +6,12 @@ namespace XLogger.Logger.ThreadSafe
     /// <summary>
     /// A DECORATOR-logger with a thread safety.
     /// </summary>
-    public class ThreadSafeLogger : IMessageLogger, IDisposable
+    public class ThreadSafeLogger : IMessageLogger2
     {
         /// <summary>
         /// Internal logger.
         /// </summary>
-        private readonly IMessageLogger _logger;
+        private readonly IMessageLogger2 _logger;
 
         /// <summary>
         /// Dispose marker.
@@ -151,7 +151,8 @@ namespace XLogger.Logger.ThreadSafe
             {
                 _disposed = true;
 
-                //nothing to do
+                //так как мы сами создаем свой логгер, то его сами должны и деинициализировать
+                _logger.Dispose();
             }
         }
     }

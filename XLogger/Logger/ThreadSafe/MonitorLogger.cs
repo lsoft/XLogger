@@ -7,7 +7,7 @@ namespace XLogger.Logger.ThreadSafe
     /// A DECORATOR-logger with a thread safety.
     /// It is using Monitor for a thread safety, so it's optimal on platforms with only 1 CPU logical core for .Net.
     /// </summary>
-    public class MonitorLogger : IMessageLogger, IDisposable
+    public class MonitorLogger : IMessageLogger2
     {
         /// <summary>
         /// Internal syncronization object.

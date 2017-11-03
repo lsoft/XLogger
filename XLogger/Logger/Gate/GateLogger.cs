@@ -11,7 +11,7 @@ namespace XLogger.Logger.Gate
     /// Logger that pushes messages into 1 or more other loggers.
     /// For example, useful in scenarios when logging must be performed to a console and a file.
     /// </summary>
-    public class GateLogger : IMessageLogger, IDisposable
+    public class GateLogger : IMessageLogger2
     {
         private readonly IMessageLogger[] _loggers;
 

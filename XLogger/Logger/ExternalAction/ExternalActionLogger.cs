@@ -11,7 +11,7 @@ namespace XLogger.Logger.ExternalAction
     /// Logger that transfer messages into an external action.
     /// For example, it's useful for a transferring messages into console.
     /// </summary>
-    public class ExternalActionLogger : IMessageLogger, IDisposable
+    public class ExternalActionLogger : IMessageLogger2
     {
         /// <summary>
         /// External action to process messages.

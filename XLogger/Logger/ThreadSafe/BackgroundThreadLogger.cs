@@ -19,7 +19,7 @@ namespace XLogger.Logger.ThreadSafe
     /// On devices with WindowsCE 7 it's happens often.
     /// Consider using MonitorLogger instead.
     /// </summary>
-    public class BackgroundThreadLogger : IMessageLogger, IDisposable
+    public class BackgroundThreadLogger : IMessageLogger2
     {
         /// <summary>
         /// Internal logger without thread safety.

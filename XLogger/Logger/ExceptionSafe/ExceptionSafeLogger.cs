@@ -6,7 +6,7 @@ namespace XLogger.Logger.ExceptionSafe
     /// <summary>
     /// A decorator logger with exception suppression.
     /// </summary>
-    public class ExceptionSafeLogger : IMessageLogger, IDisposable
+    public class ExceptionSafeLogger : IMessageLogger2
     {
         private readonly IMessageLogger _logger;
 

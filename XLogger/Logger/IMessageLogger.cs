@@ -3,6 +3,11 @@ using XLogger.Helper;
 
 namespace XLogger.Logger
 {
+    public interface IMessageLogger2 : IMessageLogger, IDisposable
+    {
+        
+    }
+
     public interface IMessageLogger
     {
         /// <summary>

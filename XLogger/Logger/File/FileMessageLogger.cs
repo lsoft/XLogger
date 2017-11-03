@@ -9,7 +9,7 @@ namespace XLogger.Logger.File
     /// <summary>
     /// File-writer logger.
     /// </summary>
-    public class FileMessageLogger : IMessageLogger, IDisposable
+    public class FileMessageLogger : IMessageLogger2
     {
         /// <summary>
         /// File-writer with a file-cycling functionality.
