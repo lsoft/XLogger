@@ -17,10 +17,14 @@ namespace XLogger.Helper
             set;
         }
 
+        private static int maxLength = 0;
+
         static StackHelper()
         {
             StackHelper.StackFrame = 2;
         }
+
+        private static volatile int _maxLength = 14;
 
         internal static string GetClassNameFromStack()
         {
@@ -33,6 +37,15 @@ namespace XLogger.Helper
 
                 var method = stack.GetFrame(StackHelper.StackFrame).GetMethod();
                 result = GetClassName(method.DeclaringType);
+
+                if (result.Length > _maxLength)
+                {
+                    _maxLength = result.Length;
+                }
+                else
+                {
+                    result = result.PadRight(_maxLength);
+                }
             }
             catch
             {
